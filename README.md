@@ -4,7 +4,7 @@ emoji: 🦜
 colorFrom: blue
 colorTo: green
 sdk: streamlit
-app_file: mcqgenerator/StreamlitApp.py
+app_file: StreamlitApp.py
 pinned: false
 ---
 

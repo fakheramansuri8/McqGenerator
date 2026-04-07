@@ -9,5 +9,4 @@ PyPDF2
 pandas
 
 
-#for installation of local packages
--e .
+# -e . removed for Hugging Face compatibility
