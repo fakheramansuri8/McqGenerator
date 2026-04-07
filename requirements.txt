@@ -1,8 +1,12 @@
 openai
+langchain-core
 langchain
+langchain-openai
+langchain-google-genai
 streamlit
-python-dotenv
+langchain-community
 PyPDF2
+pandas
 
 
 #for installation of local packages

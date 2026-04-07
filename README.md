@@ -1,55 +1,76 @@
-# McqGenerator
-## Overview
+---
+title: MCQ Generator 📝✨
+emoji: 🦜
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+app_file: mcqgenerator/StreamlitApp.py
+pinned: false
+---
 
-The Automated MCQ Generator streamlines the creation of multiple-choice questions using advanced NLP techniques. Utilizing OpenAI's GPT-3.5 Turbo and LangChain, this project automates MCQ generation, making it ideal for educators and students in e-learning environments.
+# MCQs Creator Application 📝✨
 
-## Features
+A professional, production-ready Multiple Choice Question (MCQ) generator powered by **LangChain (LCEL)** and **Streamlit**. Supporting various LLM providers with a fully dynamic, UI-driven configuration.
 
-- **Automated MCQ Generation**: Create MCQs from input text using cutting-edge language models.
-- **Customization**: Adjust parameters like subject, difficulty, and question type.
-- **User-Friendly Interface**: Streamlit-based web app for easy interaction.
-- **Scalability**: Handles large datasets, suitable for educational institutions.
+## ✨ Features
+- **Multi-Model Support**: Use OpenAI (GPT-4/3.5), Google Gemini (Pro/Flash), or any local OpenAI-compatible model (Llama 3, etc.).
+- **Dynamic UI Configuration**: Input your API keys and select models directly in the app. No `.env` files required!
+- **LCEL Architecture**: High-reliability MCQ generation using LangChain Expression Language.
+- **Smart Analysis**: Automatic English grammar and complexity evaluation of generated quizzes.
+- **Modern UI**: Sleek, wide layout with real-time spinners and status indicators.
+- **Export Options**: Download your generated MCQs as professional CSV files.
 
-## Technologies Used
+## 🛠️ Tech Stack
+- **Core**: Python 3.10+
+- **Agentic Logic**: LangChain (LCEL)
+- **Interface**: Streamlit
+- **LLM Providers**: OpenAI, Google Google-GenAI, Local via LM Studio/Ollama
 
-- **Languages**: Python
-- **Libraries**: OpenAI, LangChain, Streamlit, PyPDF2, Scikit-learn, TensorFlow
-- **Models**: OpenAI GPT-3.5 Turbo
+## 📂 Project Structure
+```text
+mcqgenerator/
+├── MCQGenerator.py     # Core MCQ generation logic (LCEL)
+├── StreamlitApp.py      # Main UI and application entry point
+├── utils.py            # PDF/Text processing and JSON parsing
+├── logger.py            # Application logging
+├── Response.json        # Standard MCQ response format template
+├── requirements.txt     # Python dependencies
+└── README.md            # Documentation
+```
 
-## Installation
+## 🚀 Getting Started
 
-2. **Create and Activate a Virtual Environment**:
-   ```bash
-   python -m venv env
-   # Windows
-   .\env\Scripts\activate
-   # macOS/Linux
-   source env/bin/activate
-   ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/fakheramansuri8/McqGenerator
+```
 
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. Installation
+It is highly recommended to use a virtual environment to manage dependencies:
+```bash
+# Create venv
+python3 -m venv venv
 
-4. **Set Up OpenAI API Key**:
-   - Obtain your API key from [OpenAI](https://www.openai.com/api/).
-   - Create a `.env` file:
-     ```plaintext
-     OPENAI_API_KEY=your_openai_api_key
-     ```
+# Activate venv
+source venv/bin/activate  # MacOS/Linux
+# .\venv\Scripts\activate # Windows
 
-## Usage
+# Install requirements
+pip install -r requirements.txt
+```
 
-1. **Run the Streamlit App**:
-   ```bash
-   streamlit run app.py
-   ```
+### 3. Run the Application
+The application handles all API keys and model settings via the UI sidebar.
+```bash
+streamlit run StreamlitApp.py
+```
 
-## Project Structure
+## 📝 How to Use
+1.  **Sidebar Config**: Provide your **API Key** and type in the **Model Name** you wish to use.
+2.  **Upload Content**: Upload a PDF or Text file containing the information you want to test.
+3.  **Quiz Settings**: Choose the number of MCQs, the subject, and the target complexity.
+4.  **Generate**: Click "Create MCQs" and wait for the results!
+5.  **Review & Export**: View the generated table, read the AI's analysis, and download the CSV.
 
-- **streamlitApp.py**: Main Streamlit application.
-- **mcqgenrator.py**: Logic for generating MCQs.
-- **requirements.txt**: Project dependencies.
-- **README.md**: Project documentation.
-
+## ⚠️ Security Note
+Your API keys are processed only within your browser session and are never stored on a server. However, always exercise caution when inputting credentials!

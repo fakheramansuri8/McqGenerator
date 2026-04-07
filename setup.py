@@ -1,10 +1,10 @@
 from setuptools import find_packages,setup
 
 setup(
-    name='mcqgenrator',
+    name='mcqgenerator',
     version='0.0.1',
-    author='sunny savita',
-    author_email='sunny.savita@ineuron.ai',
-    install_requires=["openai","langchain","streamlit","python-dotenv","PyPDF2"],
+    author='fakhera',
+    author_email='[EMAIL_ADDRESS]',
+    install_requires=["openai","langchain","langchain-openai","langchain-google-genai","langchain-community","streamlit","PyPDF2","pandas"],
     packages=find_packages()
 )
